@@ -830,7 +830,7 @@ namespace SharePointSampleDataGenerator {
 
     static List listCustomers;
 
-    public static void CreateCustomersList() {
+    public static void CreateCustomersList(int CustomerCount, int BatchSize) {
 
       Console.WriteLine("Creating customers list...");
 
@@ -847,22 +847,20 @@ namespace SharePointSampleDataGenerator {
       listCustomers.Update();
       clientContext.ExecuteQuery();
 
-      PopulateCustomersList();
+      PopulateCustomersList(CustomerCount, BatchSize);
     }
 
-    static void PopulateCustomersList() {
+    static void PopulateCustomersList(int CustomerCount, int BatchSize) {
 
       Console.WriteLine();
       Console.WriteLine("Adding sample Customers list...");
       Console.WriteLine();
 
-      int customerCount = 6200;
       int customerCounter = 0;
-      int batchSize = 25;
       int batchCounter = 0;
       int batchStart = 1;
 
-      var customers = RandomCustomerGenerator.GetCustomerList(customerCount);
+      var customers = RandomCustomerGenerator.GetCustomerList(CustomerCount);
 
       foreach(var customer in customers) {
         // increment counters
@@ -881,7 +879,7 @@ namespace SharePointSampleDataGenerator {
         newCustomer["WorkState"] = customer.State;
         newCustomer["WorkZip"] = customer.ZipCode;
         newCustomer.Update();
-        if(batchCounter >= batchSize) {
+        if(batchCounter >= BatchSize) {
           Console.WriteLine("Adding customers " + batchStart.ToString() + " to " + customerCounter + "...");
           clientContext.ExecuteQuery();
           batchCounter= 0;
