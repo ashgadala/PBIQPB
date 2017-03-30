@@ -10,8 +10,8 @@ namespace SharePointSampleDataGenerator {
     static void Main() {
 
       //SharePointListFactory.CreateProductsLists();
-      SharePointListFactory.CreateCustomersList();
-
+      //SharePointListFactory.CreateCustomersList();
+      SharePointListFactory.CreateExpensesLists();
 
     }
 

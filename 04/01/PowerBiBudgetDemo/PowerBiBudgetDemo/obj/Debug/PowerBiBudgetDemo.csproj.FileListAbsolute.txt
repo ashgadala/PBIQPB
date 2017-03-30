@@ -1,8 +1,0 @@
-C:\Demo\PowerBiBudgetDemo\PowerBiBudgetDemo\bin\Debug\PowerBiBudgetDemo.exe.config
-C:\Demo\PowerBiBudgetDemo\PowerBiBudgetDemo\bin\Debug\PowerBiBudgetDemo.exe
-C:\Demo\PowerBiBudgetDemo\PowerBiBudgetDemo\bin\Debug\PowerBiBudgetDemo.pdb
-C:\Demo\PowerBiBudgetDemo\PowerBiBudgetDemo\bin\Debug\Microsoft.SharePoint.Client.dll
-C:\Demo\PowerBiBudgetDemo\PowerBiBudgetDemo\bin\Debug\Microsoft.SharePoint.Client.Runtime.dll
-C:\Demo\PowerBiBudgetDemo\PowerBiBudgetDemo\obj\Debug\PowerBiBudgetDemo.csprojResolveAssemblyReference.cache
-C:\Demo\PowerBiBudgetDemo\PowerBiBudgetDemo\obj\Debug\PowerBiBudgetDemo.exe
-C:\Demo\PowerBiBudgetDemo\PowerBiBudgetDemo\obj\Debug\PowerBiBudgetDemo.pdb
