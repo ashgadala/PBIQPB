@@ -1,0 +1,29 @@
+Module,Module Name,Clip Name,Clip File Name,Duration
+1,Introduction,Introduction,power-bi-query-playbook-m01-01,
+2,Importing Data from Files,Importing Data from CSV files,power-bi-query-playbook-m02-01,5:38
+,,Importing Data from Text files,power-bi-query-playbook-m02-02,7:54
+,,Importing Data from an Excel Workbook,power-bi-query-playbook-m02-03,10:13
+,,Creating a Query to Analyze the File Structure of a Local Folder,power-bi-query-playbook-m02-04,5:49
+3,Importing Data from Databases,Importing Data from an Access Database,power-bi-query-playbook-m03-01,8:53
+,,Importing Data from a SQL Server On-premises Database,power-bi-query-playbook-m03-02,
+,,Importing Data from an Azure SQL Database,power-bi-query-playbook-m03-03,
+4,Importing Data from Online Services,Importing Data from SharePoint Lists,power-bi-query-playbook-m04-01,
+,,Importing Data from an Online Service (Google Analytics),power-bi-query-playbook-m04-02,
+,,Importing Data from an HTML table on a Web Page,power-bi-query-playbook-m04-03,
+,,Importing Data from an OData Feed,power-bi-query-playbook-m04-04,
+5,"Cleaning, Transforming and Reshaping Data",Expanding Columns from Related Tables,power-bi-query-playbook-m05-01,
+,,Merging Columns from a Lookup Table,power-bi-query-playbook-m05-02,
+,,Appending Rows from Multiple Tables,power-bi-query-playbook-m05-03,
+,,Splitting a Column using a Custom Delimiter,power-bi-query-playbook-m05-04,
+,,Creating a Query with Custom Columns and Conditional Columns,power-bi-query-playbook-m06-01,
+,,Creating a Query to Perform Filtering and Aggregate Rollups,power-bi-query-playbook-m06-02,
+6,Creating Queries using Live Connections,Using DirectQuery Mode to Connect to an Azure SQL Database,,
+,,Creating a Live Connection to an SSAS Database,,
+7,Designing Queries to be More Efficient and Maintainable,Reshaping Data from an OLTP Database into an OLAP Star Schema,power-bi-query-playbook-m07-01,
+,,Referencing Queries to Design using Query Composition,power-bi-query-playbook-m07-02,
+,,Working with Parameterized Queries and Project Template Files,power-bi-query-playbook-m08-01,
+8,Writing Queries by Hand using the M Programming Language,Creating a Blank Query and Writing M Code by Hand,power-bi-query-playbook-m09-01,
+,,"Writing M Code to Work with Lists, Records and Tables",power-bi-query-playbook-m09-02,
+9,Integrating R Scripts into Power BI Desktop Queries,Creating a Query using an R Script as its Data Source,power-bi-query-playbook-m10-01,
+,,Creating a Query that uses an R Script as an Applied Step,power-bi-query-playbook-m10-02,
+,,,,
