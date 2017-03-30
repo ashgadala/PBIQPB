@@ -100,8 +100,8 @@ namespace PowerBiBudgetDemo {
     #endregion
 
     static void Main() {
-      string user = "TedP@SharePointConfessions.onMicrosoft.com";
-      string pwd = "$altyDog@32";
+      string user = "Student@pbiqpb.onMicrosoft.com";
+      string pwd = "Pa$$word!";
       SecureString securePassword = new SecureString();
       foreach(char c in pwd) {
         securePassword.AppendChar(c);
