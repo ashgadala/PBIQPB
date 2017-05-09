@@ -26,12 +26,16 @@ namespace SharePointSampleDataGenerator {
         securePassword.AppendChar(c);
       };
       clientContext.Credentials = new SharePointOnlineCredentials(userName, securePassword);
+      clientContext.Load(site);
+      clientContext.Load(site.Lists);
+      clientContext.Load(site.ContentTypes);
+      clientContext.ExecuteQuery();
     }
 
     #endregion
 
     #region "Variables and helper methods for site columns, content types and lists"
-    
+
     static Field CreateSiteColumn(string fieldName, string fieldDisplayName, string fieldType) {
 
       Console.WriteLine("Creating " + fieldName + " site column...");
@@ -57,6 +61,7 @@ namespace SharePointSampleDataGenerator {
     }
 
     static void DeleteContentType(string contentTypeName) {
+      
       try {
         foreach (var ct in site.ContentTypes) {
           if (ct.Name.Equals(contentTypeName)) {
@@ -1293,12 +1298,12 @@ namespace SharePointSampleDataGenerator {
       AddExpense("Printer Paper", ExpenseCategory.OfficeSupplies, new DateTime(2016, 12, 1), 34.20m);
       AddExpense("Google Ad Words", ExpenseCategory.Marketing, new DateTime(2016, 12, 1), 500m);
       AddExpense("Cleaning Supplies", ExpenseCategory.OfficeSupplies, new DateTime(2016, 12, 1), 144.50m);
-      AddExpense("Particle Accelerator", ExpenseCategory.ResearchAndDevelopment, new DateTime(2016, 12, 1), 12000m);
+      AddExpense("Particle Accelerator", ExpenseCategory.ResearchAndDevelopment, new DateTime(2016, 12, 1), 1200m);
       AddExpense("Pencils", ExpenseCategory.OfficeSupplies, new DateTime(2016, 12, 1), 8.95m);
-      AddExpense("TV Ads - Southeast", ExpenseCategory.Marketing, new DateTime(2016, 12, 1), 3200m);
+      AddExpense("TV Ads - Southeast", ExpenseCategory.Marketing, new DateTime(2016, 12, 1), 1200m);
       AddExpense("Science Calculator", ExpenseCategory.ResearchAndDevelopment, new DateTime(2016, 12, 1), 120m);
-      AddExpense("TV Ads - East Coast", ExpenseCategory.Marketing, new DateTime(2016, 12, 1), 2800m);
-      AddExpense("TV Ads - West Coast", ExpenseCategory.Marketing, new DateTime(2016, 12, 1), 2400m);
+      AddExpense("TV Ads - East Coast", ExpenseCategory.Marketing, new DateTime(2016, 12, 1), 1800m);
+      AddExpense("TV Ads - West Coast", ExpenseCategory.Marketing, new DateTime(2016, 12, 1), 900m);
       AddExpense("Coffee Supplies", ExpenseCategory.OfficeSupplies, new DateTime(2016, 12, 1), 45.33m);
       AddExpense("Google Ad Words", ExpenseCategory.Marketing, new DateTime(2016, 12, 1), 500m);
       AddExpense("Office chairs", ExpenseCategory.OfficeSupplies, new DateTime(2016, 12, 1), 780.32m);
@@ -1328,22 +1333,22 @@ namespace SharePointSampleDataGenerator {
 
       AddExpenseBudget(ExpenseCategory.OfficeSupplies, "2016", "Q1", 1000m);
       AddExpenseBudget(ExpenseCategory.Marketing, "2016", "Q1", 7500m);
-      AddExpenseBudget(ExpenseCategory.Operations, "2016", "Q1", 2000m);
+      AddExpenseBudget(ExpenseCategory.Operations, "2016", "Q1", 7000m);
       AddExpenseBudget(ExpenseCategory.ResearchAndDevelopment, "2016", "Q1", 5000m);
 
       AddExpenseBudget(ExpenseCategory.OfficeSupplies, "2016", "Q2", 1000m);
       AddExpenseBudget(ExpenseCategory.Marketing, "2016", "Q2", 7500m);
-      AddExpenseBudget(ExpenseCategory.Operations, "2016", "Q2", 2000m);
+      AddExpenseBudget(ExpenseCategory.Operations, "2016", "Q2", 7000m);
       AddExpenseBudget(ExpenseCategory.ResearchAndDevelopment, "2016", "Q2", 5000m);
 
       AddExpenseBudget(ExpenseCategory.OfficeSupplies, "2016", "Q3", 1000m);
       AddExpenseBudget(ExpenseCategory.Marketing, "2016", "Q3", 10000m);
-      AddExpenseBudget(ExpenseCategory.Operations, "2016", "Q3", 2000m);
+      AddExpenseBudget(ExpenseCategory.Operations, "2016", "Q3", 7000m);
       AddExpenseBudget(ExpenseCategory.ResearchAndDevelopment, "2016", "Q3", 5000m);
 
       AddExpenseBudget(ExpenseCategory.OfficeSupplies, "2016", "Q4", 1000m);
       AddExpenseBudget(ExpenseCategory.Marketing, "2016", "Q4", 10000m);
-      AddExpenseBudget(ExpenseCategory.Operations, "2016", "Q4", 2000m);
+      AddExpenseBudget(ExpenseCategory.Operations, "2016", "Q4", 7000m);
       AddExpenseBudget(ExpenseCategory.ResearchAndDevelopment, "2016", "Q4", 5000m);
 
 
